@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Core/Core.iml" filepath="$PROJECT_DIR$/Core/Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoList.iml" filepath="$PROJECT_DIR$/ToDoList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoFx/ToDoListFX.iml" filepath="$PROJECT_DIR$/ToDoFx/ToDoListFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoSwing/ToDoSwing.iml" filepath="$PROJECT_DIR$/ToDoSwing/ToDoSwing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoWeb/ToDoWeb.iml" filepath="$PROJECT_DIR$/ToDoWeb/ToDoWeb.iml" />
+    </modules>
+  </component>
+</project>
