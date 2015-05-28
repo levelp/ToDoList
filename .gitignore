@@ -15,6 +15,5 @@ hs_err_pid*
 target
 
 # Настройки Idea
-.idea/libraries
-.idea/dictionaries
-.idea/workspace.xml
+.idea
+*.iml
