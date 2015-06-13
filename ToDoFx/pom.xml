@@ -11,5 +11,12 @@
 
     <artifactId>ToDoFx</artifactId>
 
-
+    <dependencies>
+        <!-- Подключаем ядро системы -->
+        <dependency>
+            <groupId>levelp</groupId>
+            <artifactId>Core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

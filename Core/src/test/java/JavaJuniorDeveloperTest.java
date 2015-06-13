@@ -1,7 +1,7 @@
-import contacts.Contact;
+import levelp.model.contacts.Contact;
+import levelp.model.tasks.Project;
+import levelp.model.tasks.Task;
 import org.junit.Test;
-import tasks.Project;
-import tasks.Task;
 
 import static org.junit.Assert.assertEquals;
 

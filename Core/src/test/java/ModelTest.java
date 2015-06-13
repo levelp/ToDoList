@@ -1,7 +1,7 @@
-import contacts.Email;
+import levelp.model.contacts.Email;
 import org.junit.Test;
 
-import static contacts.ContactType.HOME;
+import static levelp.model.contacts.ContactType.HOME;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

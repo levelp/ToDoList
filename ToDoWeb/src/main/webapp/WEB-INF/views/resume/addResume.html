@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Добавление резюме</title>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div class="container">
+
+    <form class="form-narrow form-horizontal" method="post"
+          th:action="@{/addResume}" th:object="${resume}">
+        <fieldset>
+            <legend>Добавление резюме</legend>
+
+            <div class="form-group" th:classappend="${#fields.hasErrors('title')}? 'has-error'">
+                <label for="title" class="col-lg-2 control-label">Заголовок</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="title"
+                           placeholder="Заголовок резюме" th:field="*{title}"/>
+                </div>
+            </div>
+
+            <div th:replace="fragments/submit :: submit(text = 'Сохранить')"></div>
+        </fieldset>
+
+    </form>
+
+    <div th:replace="fragments/footer :: footer">&copy; Footer фрагмент</div>
+</div>
+</body>
+</html>

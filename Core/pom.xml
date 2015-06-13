@@ -24,5 +24,10 @@
             <artifactId>google-api-client</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
     </dependencies>
 </project>

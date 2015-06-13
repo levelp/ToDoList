@@ -34,7 +34,7 @@
 **Обработчики (коннекторы) для задач:**
 * Источники задач: электронная почта, ввод на сайте, ввод в приложении
 * Синхронизация (другие списки задач)
- * GTasks: https://developers.google.com/google-apps/tasks/
+ * GTasks: https://developers.google.com/google-apps/todolist.model.tasks/
  * Wunderlist: https://developer.wunderlist.com/documentation
  * Any.do? Unofficial API: http://cweagans.net/2013/04/12/any-do-unofficial-api/
 * Автоматические исполнители (скрипты, службы, делегировать)
@@ -49,7 +49,7 @@
 * по deadline (времени завершения)
 
 **Синхронизация для календаря:**
-* Google Calendar API - https://developers.google.com/google-apps/calendar/
+* Google Calendar API - https://developers.google.com/google-apps/todolist.model.calendar/
 * VKontakte API - https://vk.com/apiclub
 
 Компонент для Time-tracking - запись событий по времени для сравнения с исходным планом.
