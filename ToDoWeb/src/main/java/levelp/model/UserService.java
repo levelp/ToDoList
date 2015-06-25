@@ -48,6 +48,12 @@ public class UserService implements UserDetailsService {
         SecurityContextHolder.getContext().setAuthentication(authenticate(user));
     }
 
+    /**
+     * На входе логин и пароль, на выходе индентификатор сессии
+     *
+     * @param user
+     * @return
+     */
     private Authentication authenticate(User user) {
         return new UsernamePasswordAuthenticationToken(createUser(user), null, Collections.singleton(createAuthority(user)));
     }

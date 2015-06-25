@@ -17,15 +17,18 @@ public class Project {
     @OneToMany(fetch = FetchType.LAZY)
     final public List<Project> subProjects = new ArrayList<>();
     /**
-     * Задачи
+     * Задачи входящие в этот проект
      */
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "")
     public List<Task> tasks = new ArrayList<>();
     /**
      * Ответственные за проект
      */
     @OneToMany(fetch = FetchType.LAZY)
     public List<Contact> responsible = new ArrayList<>();
+    /**
+     * Идентификатор проекта
+     */
     @Column(name = "id")
     @Id
     @GeneratedValue

@@ -12,11 +12,14 @@ import java.util.List;
  * Задача: выполяется за один раз
  */
 @Entity
+@Table(name = "TASK")
 public class Task {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     User user;
+    @Transient
+    boolean ignoredField;
     /**
      * id задачи
      */
@@ -27,15 +30,30 @@ public class Task {
      * Задача имеет следующие свойства:
      * имя, описание, приоритет, подзадачи, тэги
      */
+    @Column(name = "NAME", nullable = false, length = 2000)
     private String name;
     private String description;
     private TaskPriority priority;
-
-    @OneToMany(fetch = FetchType.LAZY)
+    /**
+     * Подзадачи
+     */
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parent")
     private List<Task> subTasks = new ArrayList<>();
+
+    /**
+     * Родительская задача для подзадачи
+     */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_id")
+    private Task parent;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Tag> tags = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id",
+            foreignKey = @ForeignKey(name = "FK_TASK_PROJECT"))
+    private Project project;
 
     /**
      * При создании экземпляра, мы передаем конструктору имя задачи.
