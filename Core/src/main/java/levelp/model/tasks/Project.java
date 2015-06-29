@@ -14,12 +14,16 @@ public class Project {
     /**
      * Подпроекты
      */
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "parent")
     final public List<Project> subProjects = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_id")
+    private Project parent;
     /**
      * Задачи входящие в этот проект
      */
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "project")
     public List<Task> tasks = new ArrayList<>();
     /**
      * Ответственные за проект
