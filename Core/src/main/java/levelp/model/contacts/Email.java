@@ -14,7 +14,8 @@ public class Email {
     @Id
     @GeneratedValue
     Long id;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.LAZY)
     Contact contact;
     /**
      * Сам адрес

@@ -106,11 +106,11 @@ public class User implements java.io.Serializable {
         this.role = role;
     }
 
-    public List<Task> getResumes() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setResumes(List<Task> resumes) {
-        this.tasks = resumes;
+    public void setResumes(List<Task> tasks) {
+        this.tasks = tasks;
     }
 }

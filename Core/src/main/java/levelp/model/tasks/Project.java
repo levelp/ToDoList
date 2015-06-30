@@ -28,7 +28,7 @@ public class Project {
     /**
      * Ответственные за проект
      */
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
     public List<Contact> responsible = new ArrayList<>();
     /**
      * Идентификатор проекта

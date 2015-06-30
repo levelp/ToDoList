@@ -16,8 +16,9 @@ public class Contact {
     /**
      * E-mail'ы
      */
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "contact")
     public List<Email> emails = new ArrayList<>();
+
     public String text;
     @Column(name = "id")
     @Id
