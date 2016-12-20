@@ -17,3 +17,5 @@ target
 # Настройки Idea
 .idea
 *.iml
+
+ToDoWeb/LOG.TXT
